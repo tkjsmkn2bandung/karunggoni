@@ -1,6 +1,5 @@
 - internal/docker-push:
     # specify the image to be pushed - this is the one we created earlier
-    image-name: my-new-image
     username: dapurspl # Registry username
     password: Bandung#123 # Registry password
     registry: https://hub.docker.com
