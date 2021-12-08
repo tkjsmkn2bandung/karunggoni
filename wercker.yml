@@ -1,4 +1,4 @@
-box: rails:4.1
+box: python3
 deploy:
   steps:
     - internal/docker-push:
