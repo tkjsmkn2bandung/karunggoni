@@ -16,6 +16,7 @@ test:
     - spotify/cassandra
   steps:
     - bundle-install
+    name: oracle wercker
     - script:
         name: setup cassandra
         code: until bundle exec rake cassandra:setup; do sleep 5; done;
