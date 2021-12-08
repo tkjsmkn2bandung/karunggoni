@@ -1,4 +1,4 @@
-box: ubuntu@12.04
+box: ubuntu 12:04
 deploy:
   steps:
     - internal/docker-push:
